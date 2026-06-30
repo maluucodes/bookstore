@@ -11,7 +11,7 @@ class CategorySerializerTest(TestCase):
             title="Livros",
             slug="livros",
             description="Categoria de livros",
-            active=True
+            active=True,
         )
 
         serializer = CategorySerializer(category)

@@ -9,22 +9,15 @@ from order.serializers.order_serializer import OrderSerializer
 class OrderSerializerTest(TestCase):
 
     def test_order_serializer(self):
-        user = User.objects.create_user(
-            username="maria",
-            password="123456"
-        )
+        user = User.objects.create_user(username="maria", password="123456")
 
-        category = Category.objects.create(
-            title="Livros",
-            slug="livros",
-            active=True
-        )
+        category = Category.objects.create(title="Livros", slug="livros", active=True)
 
         product = Product.objects.create(
             title="Livro Python",
             description="Livro sobre Python",
             price=100,
-            active=True
+            active=True,
         )
 
         product.categories.add(category)

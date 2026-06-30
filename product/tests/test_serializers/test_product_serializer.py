@@ -7,18 +7,9 @@ from product.serializers.product_serializer import ProductSerializer
 class ProductSerializerTest(TestCase):
 
     def test_product_serializer(self):
-        category = Category.objects.create(
-            title="Tecnologia",
-            slug="tecnologia",
-            active=True
-        )
+        category = Category.objects.create(title="Tecnologia", slug="tecnologia", active=True)
 
-        product = Product.objects.create(
-            title="Notebook",
-            description="Notebook Dell",
-            price=3000,
-            active=True
-        )
+        product = Product.objects.create(title="Notebook", description="Notebook Dell", price=3000, active=True)
 
         product.categories.add(category)
 
