@@ -52,6 +52,7 @@ coverage.xml
 cover/
 .idea/
 env.dev
+#
 
 # Translations
 *.mo
